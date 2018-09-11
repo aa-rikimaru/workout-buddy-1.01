@@ -1,0 +1,588 @@
+{
+	"name": "Starting Strength",
+	"author": "Mark Rippetoe",
+	"sessions": [{
+			"cycle": 1,
+			"day": 1,
+			"exerciseScheme": {
+				"Squat": {
+					"set": [{
+							"rep": 5,
+							"weight": 155
+						},
+						{
+							"rep": 5,
+							"weight": 175
+						},
+						{
+							"rep": 5,
+							"weight": 195
+						},
+						{
+							"rep": 5,
+							"weight": 195
+						},
+						{
+							"rep": 5,
+							"weight": 195
+						}
+					],
+					"description": "Exercise for the legs",
+					"completed": false
+				},
+				"Bench Press": {
+					"set": [{
+							"rep": 5,
+							"weight": 135
+						},
+						{
+							"rep": 5,
+							"weight": 145
+						},
+						{
+							"rep": 5,
+							"weight": 155
+						},
+						{
+							"rep": 5,
+							"weight": 155
+						},
+						{
+							"rep": 5,
+							"weight": 155
+						}
+					],
+					"description": "Exercise for the chest",
+					"completed": false
+				},
+				"Deadlift": {
+					"set": [{
+							"rep": 5,
+							"weight": 135
+						},
+						{
+							"rep": 3,
+							"weight": 185
+						},
+						{
+							"rep": 2,
+							"weight": 225
+						},
+						{
+							"rep": 2,
+							"weight": 255
+						},
+						{
+							"rep": 5,
+							"weight": 285
+						}
+					],
+					"description": "Exercise for the legs and back",
+					"completed": false
+				}
+			}
+		},
+		{
+			"cycle": 1,
+			"day": 3,
+			"exerciseScheme": {
+				"Squat": {
+					"set": [{
+							"rep": 5,
+							"weight": 160
+						},
+						{
+							"rep": 5,
+							"weight": 180
+						},
+						{
+							"rep": 5,
+							"weight": 200
+						},
+						{
+							"rep": 5,
+							"weight": 200
+						},
+						{
+							"rep": 5,
+							"weight": 200
+						}
+					],
+					"description": "Exercise for the legs",
+					"completed": false
+				},
+				"Shoulder Press": {
+					"set": [{
+							"rep": 5,
+							"weight": 45
+						},
+						{
+							"rep": 3,
+							"weight": 55
+						},
+						{
+							"rep": 5,
+							"weight": 65
+						},
+						{
+							"rep": 5,
+							"weight": 65
+						},
+						{
+							"rep": 5,
+							"weight": 65
+						}
+					],
+					"description": "Strict barbell shoulder press",
+					"completed": false
+				},
+				"Power Clean": {
+					"set": [{
+							"rep": 5,
+							"weight": 45
+						},
+						{
+							"rep": 3,
+							"weight": 55
+						},
+						{
+							"rep": 1,
+							"weight": 65
+						},
+						{
+							"rep": 5,
+							"weight": 75
+						},
+						{
+							"rep": 5,
+							"weight": 75
+						},
+						{
+							"rep": 5,
+							"weight": 75
+						}
+					],
+					"description": "An explosive movement for the back",
+					"completed": false
+				}
+			}
+		},
+		{
+			"cycle": 1,
+			"day": 5,
+			"exerciseScheme": {
+				"Squat": {
+					"set": [{
+							"rep": 5,
+							"weight": 165
+						},
+						{
+							"rep": 5,
+							"weight": 185
+						},
+						{
+							"rep": 5,
+							"weight": 205
+						},
+						{
+							"rep": 5,
+							"weight": 205
+						},
+						{
+							"rep": 5,
+							"weight": 205
+						}
+					],
+					"description": "Exercise for the legs",
+					"completed": false
+				},
+				"Bench Press": {
+					"set": [{
+							"rep": 5,
+							"weight": 45
+						},
+						{
+							"rep": 5,
+							"weight": 95
+						},
+						{
+							"rep": 5,
+							"weight": 160
+						},
+						{
+							"rep": 5,
+							"weight": 160
+						},
+						{
+							"rep": 5,
+							"weight": 160
+						}
+					],
+					"description": "Exercise for the chest",
+					"completed": false
+				},
+				"Deadlift": {
+					"set": [{
+							"rep": 5,
+							"weight": 145
+						},
+						{
+							"rep": 3,
+							"weight": 195
+						},
+						{
+							"rep": 2,
+							"weight": 235
+						},
+						{
+							"rep": 2,
+							"weight": 265
+						},
+						{
+							"rep": 5,
+							"weight": 295
+						}
+					],
+					"description": "Exercise for the legs and back",
+					"completed": false
+				}
+			}
+		},
+		{
+			"cycle": 2,
+			"day": 8,
+			"exerciseScheme": {
+				"Squat": {
+					"set": [{
+							"rep": 5,
+							"weight": 170
+						},
+						{
+							"rep": 5,
+							"weight": 190
+						},
+						{
+							"rep": 5,
+							"weight": 210
+						},
+						{
+							"rep": 5,
+							"weight": 210
+						},
+						{
+							"rep": 5,
+							"weight": 210
+						}
+					],
+					"description": "Exercise for the legs",
+					"completed": false
+				},
+				"Shoulder Press": {
+					"set": [{
+							"rep": 5,
+							"weight": 50
+						},
+						{
+							"rep": 3,
+							"weight": 60
+						},
+						{
+							"rep": 5,
+							"weight": 70
+						},
+						{
+							"rep": 5,
+							"weight": 70
+						},
+						{
+							"rep": 5,
+							"weight": 70
+						}
+					],
+					"description": "Strict barbell shoulder press",
+					"completed": false
+				},
+				"Power Clean": {
+					"set": [{
+							"rep": 5,
+							"weight": 50
+						},
+						{
+							"rep": 3,
+							"weight": 60
+						},
+						{
+							"rep": 1,
+							"weight": 70
+						},
+						{
+							"rep": 5,
+							"weight": 80
+						},
+						{
+							"rep": 5,
+							"weight": 80
+						},
+						{
+							"rep": 5,
+							"weight": 80
+						}
+					],
+					"description": "An explosive movement for the back",
+					"completed": false
+				}
+			}
+		},
+		{
+			"cycle": 2,
+			"day": 10,
+			"exerciseScheme": {
+				"Squat": {
+					"set": [{
+							"rep": 5,
+							"weight": 175
+						},
+						{
+							"rep": 5,
+							"weight": 195
+						},
+						{
+							"rep": 5,
+							"weight": 215
+						},
+						{
+							"rep": 5,
+							"weight": 215
+						},
+						{
+							"rep": 5,
+							"weight": 215
+						}
+					],
+					"description": "Exercise for the legs",
+					"completed": false
+				},
+				"Bench Press": {
+					"set": [{
+							"rep": 5,
+							"weight": 45
+						},
+						{
+							"rep": 5,
+							"weight": 95
+						},
+						{
+							"rep": 5,
+							"weight": 165
+						},
+						{
+							"rep": 5,
+							"weight": 165
+						},
+						{
+							"rep": 5,
+							"weight": 165
+						}
+					],
+					"description": "Exercise for the chest",
+					"completed": false
+				},
+				"Deadlift": {
+					"set": [{
+							"rep": 5,
+							"weight": 155
+						},
+						{
+							"rep": 3,
+							"weight": 205
+						},
+						{
+							"rep": 2,
+							"weight": 245
+						},
+						{
+							"rep": 2,
+							"weight": 275
+						},
+						{
+							"rep": 5,
+							"weight": 305
+						}
+					],
+					"description": "Exercise for the legs and back",
+					"completed": false
+				}
+			}
+		},
+		{
+			"cycle": 2,
+			"day": 12,
+			"exerciseScheme": {
+				"Squat": {
+					"set": [{
+							"rep": 5,
+							"weight": 180
+						},
+						{
+							"rep": 5,
+							"weight": 200
+						},
+						{
+							"rep": 5,
+							"weight": 220
+						},
+						{
+							"rep": 5,
+							"weight": 220
+						},
+						{
+							"rep": 5,
+							"weight": 220
+						}
+					],
+					"description": "Exercise for the legs",
+					"completed": false
+				},
+				"Shoulder Press": {
+					"set": [{
+							"rep": 5,
+							"weight": 55
+						},
+						{
+							"rep": 3,
+							"weight": 65
+						},
+						{
+							"rep": 5,
+							"weight": 75
+						},
+						{
+							"rep": 5,
+							"weight": 75
+						},
+						{
+							"rep": 5,
+							"weight": 75
+						}
+					],
+					"description": "Strict barbell shoulder press",
+					"completed": false
+				},
+				"Power Clean": {
+					"set": [{
+							"rep": 5,
+							"weight": 55
+						},
+						{
+							"rep": 3,
+							"weight": 65
+						},
+						{
+							"rep": 1,
+							"weight": 75
+						},
+						{
+							"rep": 5,
+							"weight": 85
+						},
+						{
+							"rep": 5,
+							"weight": 85
+						},
+						{
+							"rep": 5,
+							"weight": 85
+						}
+					],
+					"description": "An explosive movement for the back",
+					"completed": false
+				}
+			}
+		},
+		{
+			"cycle": 3,
+			"day": 15,
+			"exerciseScheme": {
+				"Squat": {
+					"set": [{
+							"rep": 5,
+							"weight": 185
+						},
+						{
+							"rep": 5,
+							"weight": 205
+						},
+						{
+							"rep": 5,
+							"weight": 225
+						},
+						{
+							"rep": 5,
+							"weight": 225
+						},
+						{
+							"rep": 5,
+							"weight": 225
+						}
+					],
+					"description": "Exercise for the legs",
+					"completed": false
+				},
+				"Bench Press": {
+					"set": [{
+							"rep": 5,
+							"weight": 45
+						},
+						{
+							"rep": 5,
+							"weight": 95
+						},
+						{
+							"rep": 5,
+							"weight": 135
+						},
+						{
+							"rep": 5,
+							"weight": 170
+						},
+						{
+							"rep": 5,
+							"weight": 170
+						},
+						{
+							"rep": 5,
+							"weight": 170
+						}
+					],
+					"description": "Exercise for the chest",
+					"completed": false
+				},
+				"Deadlift": {
+					"set": [{
+							"rep": 5,
+							"weight": 165
+						},
+						{
+							"rep": 3,
+							"weight": 215
+						},
+						{
+							"rep": 2,
+							"weight": 255
+						},
+						{
+							"rep": 2,
+							"weight": 285
+						},
+						{
+							"rep": 5,
+							"weight": 315
+						}
+					],
+					"description": "Exercise for the legs and back",
+					"completed": false
+				}
+			}
+		}
+	]
+}
