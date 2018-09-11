@@ -79,7 +79,6 @@ class ProgramFormModal extends Component {
   }
 
   newProgramHandler() {
-
     let {programName, programLevel, programDescription, programAuthor} = this.state;
 
     let newProgram = {
@@ -89,7 +88,7 @@ class ProgramFormModal extends Component {
       author: programAuthor
     };
 
-    this.props.newProgram(newProgram);
+    this.props.submitHandler(newProgram);
   }
 
   render() {

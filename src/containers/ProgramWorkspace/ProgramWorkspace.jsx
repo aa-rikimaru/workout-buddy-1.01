@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import ProgramFormModal from '../Modals/ProgramFormModal.jsx';
@@ -10,11 +11,12 @@ class ProgramWorkspace extends Component {
     super(props);
 
     this.state = {
-      program: { name: '', author: ''}
+      program: props.program
     };
 
     this.handleProgramNameInput = this.handleProgramNameInput.bind(this);
     this.handleProgramAuthorInput = this.handleProgramAuthorInput.bind(this);
+    this.handleNewProgram = this.handleNewProgram.bind(this);
   }
 
   handleProgramNameInput(event) {
@@ -29,8 +31,13 @@ class ProgramWorkspace extends Component {
     this.setState({ program: program });
   }
 
+  handleNewProgram(newProgram) {
+    this.setState({ program: newProgram});
+  }
+
   render() {
     let { name, author } = this.state.program;
+    console.log('Name: ', name, 'Author: ', author);
 
     return (<div className="row">
       <div className="col-10">
@@ -41,7 +48,7 @@ class ProgramWorkspace extends Component {
       </div>
       <div className="col-2">
         <div id="program-button-group" className="list-group">
-          <ProgramFormModal modalButtonLabel="New"/>
+          <ProgramFormModal modalButtonLabel="New" submitHandler={this.handleNewProgram} />
           <button className="btn btn-primary">Save</button>
         </div>
       </div>
@@ -49,9 +56,22 @@ class ProgramWorkspace extends Component {
   }
 }
 
+ProgramWorkspace.propTypes = {
+  program: PropTypes.object
+}
+
+ProgramWorkspace.defaultProps = {
+  program: {
+    name: '',
+    author: '',
+    level: 'Beginner',
+    description: ''
+  }
+}
+
 function mapStateToProps(state) {
   return {
-    program: state.program
+    program: state.programs
   }
 }
 
