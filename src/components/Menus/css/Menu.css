@@ -1,0 +1,16 @@
+.menu-item:hover {
+	color: #FFF;
+	background-color: #C06C84;
+
+}
+
+.menu-item {
+	padding: 2.5px 0px 2.5px 0px;
+	border-radius: 5px;
+	align-items: center;
+}
+
+#program-menu {
+	display: none;
+	position: absolute;
+}
