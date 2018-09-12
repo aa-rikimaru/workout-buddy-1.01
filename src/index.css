@@ -1,10 +1,13 @@
-body {
-  font-family: sans-serif;
+:root {
   --primary-light-bg: #EEE2DC;
   --red-font-color: #AC3B61;
   --blue-font-color: #123C69;
   --secondary-light-bg: #EDC8B7;
   --gray-color: #BAB2B5;
+}
+
+body {
+  font-family: sans-serif;
 }
 
 input {
@@ -15,6 +18,7 @@ input {
 }
 
 .app {
-  height: 100%;
   background-color: var(--primary-light-bg);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

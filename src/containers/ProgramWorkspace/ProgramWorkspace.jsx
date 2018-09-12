@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import ProgramFormModal from '../Modals/ProgramFormModal.jsx';
+import SchemaWorkspace from './SchemaWorkspace.jsx';
 
 import './css/ProgramWorkspace.css';
 
@@ -11,11 +12,15 @@ class ProgramWorkspace extends Component {
     super(props);
 
     this.state = {
-      program: props.program
+      exerciseName: '',
+      program: props.program,
+      schema: props.schema
     };
 
     this.handleProgramNameInput = this.handleProgramNameInput.bind(this);
     this.handleProgramAuthorInput = this.handleProgramAuthorInput.bind(this);
+    this.handleExerciseNameChange = this.handleExerciseNameChange.bind(this);
+    this.handleNewExercise = this.handleNewExercise.bind(this);
     this.handleNewProgram = this.handleNewProgram.bind(this);
   }
 
@@ -35,24 +40,56 @@ class ProgramWorkspace extends Component {
     this.setState({ program: newProgram});
   }
 
-  render() {
-    let { name, author } = this.state.program;
-    console.log('Name: ', name, 'Author: ', author);
+  handleExerciseNameChange(e) {
+    this.setState({ exerciseName: e.target.value });
+  }
 
-    return (<div className="row">
-      <div className="col-10">
-        <h2><input onChange={this.handleProgramNameInput} value={name}
-          className="program-mod-input" placeholder="Program Name" type="text"/></h2>
-        <h5><input onChange={this.handleProgramAuthorInput} value={author}
-          className="program-mod-input" placeholder="Author" type="text"/></h5>
-      </div>
-      <div className="col-2">
-        <div id="program-button-group" className="list-group">
-          <ProgramFormModal modalButtonLabel="New" submitHandler={this.handleNewProgram} />
-          <button className="btn btn-primary">Save</button>
+  handleNewExercise(e) {
+    e.preventDefault();
+    let newExercise = {
+      name: this.state.exerciseName
+    }
+    this.setState({
+      schema: [newExercise, ...this.state.schema],
+      exerciseName: ''
+    });
+  }
+
+  render() {
+    let { program, schema } = this.state;
+
+    return (
+      <div className="row">
+        <div className="col-10">
+          <h2><input onChange={this.handleProgramNameInput} value={program.name}
+            className="program-mod-input" placeholder="Program Name" type="text"/></h2>
+          <h5><input onChange={this.handleProgramAuthorInput} value={program.author}
+            className="program-mod-input" placeholder="Author" type="text"/></h5>
+        </div>
+        <div className="col-2">
+          <div id="program-button-group" className="list-group">
+            <ProgramFormModal modalButtonLabel="New" submitHandler={this.handleNewProgram} />
+            <div><button className="btn btn-primary">Save</button></div>
+          </div>
+        </div>
+        <div className="col-12">
+          <form id="exercise-form" onSubmit={this.handleNewExercise} className="input-group">
+            <input
+              placeholder="Add Exercise"
+              className="form-control"
+              value={this.state.exerciseName}
+              onChange={this.handleExerciseNameChange}
+            />
+            <span className="input-group-btn">
+              <button type="submit" className="btn btn-secondary">Submit</button>
+            </span>
+          </form>
+        </div>
+        <div className="col-12">
+          <SchemaWorkspace schema={schema} />
         </div>
       </div>
-    </div>)
+    )
   }
 }
 
@@ -65,8 +102,9 @@ ProgramWorkspace.defaultProps = {
     name: '',
     author: '',
     level: 'Beginner',
-    description: ''
-  }
+    description: '',
+  },
+  schema: []
 }
 
 function mapStateToProps(state) {
