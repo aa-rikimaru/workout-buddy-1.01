@@ -19,8 +19,6 @@ class ProgramWorkspace extends Component {
 
     this.handleProgramNameInput = this.handleProgramNameInput.bind(this);
     this.handleProgramAuthorInput = this.handleProgramAuthorInput.bind(this);
-    this.handleExerciseNameChange = this.handleExerciseNameChange.bind(this);
-    this.handleNewExercise = this.handleNewExercise.bind(this);
     this.handleNewProgram = this.handleNewProgram.bind(this);
   }
 
@@ -40,21 +38,6 @@ class ProgramWorkspace extends Component {
     this.setState({ program: newProgram});
   }
 
-  handleExerciseNameChange(e) {
-    this.setState({ exerciseName: e.target.value });
-  }
-
-  handleNewExercise(e) {
-    e.preventDefault();
-    let newExercise = {
-      name: this.state.exerciseName
-    }
-    this.setState({
-      schema: [newExercise, ...this.state.schema],
-      exerciseName: ''
-    });
-  }
-
   render() {
     let { program, schema } = this.state;
 
@@ -67,26 +50,10 @@ class ProgramWorkspace extends Component {
             className="program-mod-input" placeholder="Author" type="text"/></h5>
         </div>
         <div className="col-2">
-          <div id="program-button-group" className="list-group">
-            <ProgramFormModal modalButtonLabel="New" submitHandler={this.handleNewProgram} />
+          <div id="program-button-group" className="list-group align-items-end">
+            <ProgramFormModal className="list-group-item" modalButtonLabel="New" submitHandler={this.handleNewProgram} />
             <div><button className="btn btn-primary">Save</button></div>
           </div>
-        </div>
-        <div className="col-12">
-          <form id="exercise-form" onSubmit={this.handleNewExercise} className="input-group">
-            <input
-              placeholder="Add Exercise"
-              className="form-control"
-              value={this.state.exerciseName}
-              onChange={this.handleExerciseNameChange}
-            />
-            <span className="input-group-btn">
-              <button type="submit" className="btn btn-secondary">Submit</button>
-            </span>
-          </form>
-        </div>
-        <div className="col-12">
-          <SchemaWorkspace schema={schema} />
         </div>
       </div>
     )

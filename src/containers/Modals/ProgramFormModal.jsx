@@ -8,9 +8,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { newProgram } from '../../actions/action_programs';
 
-
-import './css/ProgramFormModal.css';
-
 const FormModal = (props) => {
   const programLevels = ['Beginner', 'Intermediate', 'Advanced'];
 
@@ -93,7 +90,7 @@ class ProgramFormModal extends Component {
 
   render() {
     return (
-        <div id="program-form-container">
+        <div>
           <FormModal
             nameHandler={this.programNameHandler}
             levelHandler={this.programLevelHandler}
