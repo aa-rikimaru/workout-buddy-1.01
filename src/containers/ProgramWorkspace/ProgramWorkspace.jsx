@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import ProgramFormModal from '../Modals/ProgramFormModal.jsx';
-import SchemaWorkspace from './SchemaWorkspace.jsx';
 
 import './css/ProgramWorkspace.css';
 
@@ -14,7 +13,6 @@ class ProgramWorkspace extends Component {
     this.state = {
       exerciseName: '',
       program: props.program,
-      schema: props.schema
     };
 
     this.handleProgramNameInput = this.handleProgramNameInput.bind(this);
@@ -39,7 +37,7 @@ class ProgramWorkspace extends Component {
   }
 
   render() {
-    let { program, schema } = this.state;
+    let { program } = this.state;
 
     return (
       <div className="row">
