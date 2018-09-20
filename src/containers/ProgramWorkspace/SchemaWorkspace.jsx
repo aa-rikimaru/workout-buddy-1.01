@@ -16,7 +16,7 @@ constructor(props) {
   this.handleNewExercise = this.handleNewExercise.bind(this);
 }
 
-  renderSchema(exercise) {
+  renderWorkout(exercise) {
     return (
       <Exercise
         key = {exercise.name}
@@ -58,7 +58,7 @@ constructor(props) {
         </div>
         <div className="col-12">
           <div id="schema-workspace">
-            {this.state.exercises.map(this.renderSchema)}
+            {this.state.exercises.map(this.renderWorkout)}
           </div>
 
         </div>

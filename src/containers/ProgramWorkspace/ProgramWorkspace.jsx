@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { saveProgram } from '../../actions/action_programs';
 
 import ProgramFormModal from '../Modals/ProgramFormModal.jsx';
 
@@ -11,7 +13,6 @@ class ProgramWorkspace extends Component {
     super(props);
 
     this.state = {
-      exerciseName: '',
       program: props.program,
     };
 
@@ -36,6 +37,13 @@ class ProgramWorkspace extends Component {
     this.setState({ program: newProgram});
   }
 
+  saveProgram() {
+    console.log('Saving program...');
+    console.log(this.props.program);
+    console.log('Saving schema...');
+    console.log(this.props.schema);
+  }
+
   render() {
     let { program } = this.state;
 
@@ -50,7 +58,8 @@ class ProgramWorkspace extends Component {
         <div className="col-2">
           <div id="program-button-group" className="list-group align-items-end">
             <ProgramFormModal className="list-group-item" modalButtonLabel="New" submitHandler={this.handleNewProgram} />
-            <div><button className="btn btn-primary">Save</button></div>
+            <div><button onClick={this.props.saveProgram} className="btn btn-primary">Save</button></div>
+            <div><button onClick={this.saveProgram} className="btn btn-btn-primary">SaveState</button></div>
           </div>
         </div>
       </div>
@@ -72,10 +81,14 @@ ProgramWorkspace.defaultProps = {
   schema: []
 }
 
-function mapStateToProps(state) {
+function mapStateToProps({program, schema}) {
   return {
-    program: state.programs
+    program, schema
   }
 }
 
-export default connect(mapStateToProps)(ProgramWorkspace);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ saveProgram }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProgramWorkspace);
